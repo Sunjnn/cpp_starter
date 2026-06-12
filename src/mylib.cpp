@@ -1,8 +1,12 @@
 #include "mylib.hpp"
 
+#include <string>
+
+using std::string;
+
 namespace mylib {
 
-std::string greet(const std::string &name) {
+string greet(const string &name) {
   return "Hello, " + name + "!";
 }
 

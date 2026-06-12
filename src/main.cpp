@@ -2,7 +2,11 @@
 
 #include <iostream>
 
+using std::cout;
+
+using mylib::greet;
+
 int main() {
-  std::cout << mylib::greet("World") << '\n';
+  cout << greet("World") << '\n';
   return 0;
 }
