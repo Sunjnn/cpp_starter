@@ -38,7 +38,7 @@ IncludeCategories:
     SortPriority: 3
 SortIncludes: CaseInsensitive
 
-AllowShortFunctionsOnASingleLine: Inline
+AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 AllowShortBlocksOnASingleLine: Empty
