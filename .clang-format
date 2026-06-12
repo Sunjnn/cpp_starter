@@ -1,12 +1,13 @@
 BasedOnStyle: LLVM
 Language: Cpp
 
-ColumnLimit: 120
+ColumnLimit: 100
 
-IndentWidth: 4
-TabWidth: 4
+IndentWidth: 2
+TabWidth: 2
+ContinuationIndentWidth: 4
 UseTab: Never
-AccessModifierOffset: -4
+AccessModifierOffset: -2
 IndentCaseLabels: true
 NamespaceIndentation: None
 
@@ -43,7 +44,7 @@ AllowShortLoopsOnASingleLine: false
 AllowShortBlocksOnASingleLine: Empty
 AllowShortLambdasOnASingleLine: Inline
 
-AlignAfterOpenBracket: Align
+AlignAfterOpenBracket: AlwaysBreak
 AlignOperands: Align
 AlignTrailingComments:
   Kind: Always
@@ -65,6 +66,6 @@ CompactNamespaces: false
 Cpp11BracedListStyle: true
 SpaceBeforeCpp11BracedList: false
 
-ConstructorInitializerIndentWidth: 4
-BreakConstructorInitializers: BeforeColon
+ConstructorInitializerIndentWidth: 0
+BreakConstructorInitializers: BeforeComma
 PackConstructorInitializers: NextLine
