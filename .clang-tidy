@@ -34,9 +34,13 @@ CheckOptions:
   - key: readability-identifier-naming.ConstantParameterCase
     value: camelBack
 
-  # Global variables and static variables: UPPER_CASE
+  # Global variables: gCamelCase
   - key: readability-identifier-naming.GlobalVariableCase
-    value: UPPER_CASE
+    value: CamelCase
+  - key: readability-identifier-naming.GlobalVariablePrefix
+    value: 'g'
+
+  # Static variables: UPPER_CASE
   - key: readability-identifier-naming.StaticVariableCase
     value: UPPER_CASE
   - key: readability-identifier-naming.ClassStaticCase
@@ -66,22 +70,22 @@ CheckOptions:
   - key: readability-identifier-naming.EnumConstantCase
     value: UPPER_CASE
 
-  # Member variables: _camelBack
+  # Member variables: camelCase_
   - key: readability-identifier-naming.MemberCase
     value: camelBack
-  - key: readability-identifier-naming.MemberPrefix
+  - key: readability-identifier-naming.MemberSuffix
     value: '_'
   - key: readability-identifier-naming.PrivateMemberCase
     value: camelBack
-  - key: readability-identifier-naming.PrivateMemberPrefix
+  - key: readability-identifier-naming.PrivateMemberSuffix
     value: '_'
   - key: readability-identifier-naming.ProtectedMemberCase
     value: camelBack
-  - key: readability-identifier-naming.ProtectedMemberPrefix
+  - key: readability-identifier-naming.ProtectedMemberSuffix
     value: '_'
   - key: readability-identifier-naming.PublicMemberCase
     value: camelBack
-  - key: readability-identifier-naming.PublicMemberPrefix
+  - key: readability-identifier-naming.PublicMemberSuffix
     value: '_'
 
   # Functions and methods: lower_case
@@ -98,9 +102,11 @@ CheckOptions:
   - key: readability-identifier-naming.MacroDefinitionCase
     value: UPPER_CASE
 
-  # Constexpr variables: UPPER_CASE
+  # Constexpr variables: kCamelCase
   - key: readability-identifier-naming.ConstexprVariableCase
-    value: UPPER_CASE
+    value: CamelCase
+  - key: readability-identifier-naming.ConstexprVariablePrefix
+    value: 'k'
 
   # Header guard style (reject #pragma once)
   - key: llvm-header-guard.HeaderFileExtensions

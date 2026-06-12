@@ -32,8 +32,10 @@ bash scripts/tidy.sh      # clang-tidy (requires build/ to exist for compile_com
 | Functions / methods           | `lower_case` | `do_thing()`      |
 | Local variables / parameters  | `camelBack`  | `myVar`           |
 | Classes / structs / enums     | `CamelCase`  | `MyClass`         |
-| Member variables              | `_camelBack` | `_memberVar`      |
-| Global/static vars & consts   | `UPPER_CASE` | `MAX_SIZE`        |
+| Member variables              | `camelBack_` | `memberVar_`      |
+| Global variables              | `gCamelCase` | `gMaxSize`        |
+| Static vars & consts          | `UPPER_CASE` | `MAX_SIZE`        |
+| Constexpr variables           | `kCamelCase` | `kMaxSize`        |
 | Enum values                   | `UPPER_CASE` | `COLOR_RED`       |
 | Namespaces                    | `lower_case` | `mylib`           |
 | Macros                        | `UPPER_CASE` | `MY_MACRO`        |
