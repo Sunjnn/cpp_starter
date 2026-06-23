@@ -6,8 +6,6 @@ using std::string;
 
 namespace mylib {
 
-string greet(const string &name) {
-  return "Hello, " + name + "!";
-}
+string greet(const string &name) { return "Hello, " + name + "!"; }
 
 } // namespace mylib
