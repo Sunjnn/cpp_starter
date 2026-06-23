@@ -1,6 +1,6 @@
-#include "mylib.hpp"
-
 #include <gtest/gtest.h>
+
+#include "mylib.hpp"
 
 using mylib::greet;
 

@@ -1,6 +1,6 @@
-#include "mylib.hpp"
-
 #include <iostream>
+
+#include "mylib.hpp"
 
 using std::cout;
 
