@@ -8,7 +8,7 @@ TabWidth: 2
 ContinuationIndentWidth: 4
 UseTab: Never
 AccessModifierOffset: -2
-IndentCaseLabels: true
+IndentCaseLabels: false
 NamespaceIndentation: None
 
 BreakBeforeBraces: Attach
