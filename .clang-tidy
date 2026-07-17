@@ -22,6 +22,7 @@ Checks: >
   -misc-non-private-member-variables-in-classes,
   -misc-include-cleaner,
   -misc-use-internal-linkage,
+  -misc-no-recursion,
   modernize-*,
   -modernize-use-trailing-return-type,
   -modernize-avoid-c-arrays,
