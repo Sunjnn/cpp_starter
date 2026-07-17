@@ -58,21 +58,29 @@ CheckOptions:
   - key: readability-identifier-naming.GlobalVariablePrefix
     value: 'g'
 
-  # Static variables: UPPER_CASE
+  # Static variables: sCamelCase (function-local statics and class statics)
   - key: readability-identifier-naming.StaticVariableCase
-    value: UPPER_CASE
+    value: CamelCase
+  - key: readability-identifier-naming.StaticVariablePrefix
+    value: 's'
   - key: readability-identifier-naming.ClassStaticCase
-    value: UPPER_CASE
+    value: CamelCase
+  - key: readability-identifier-naming.ClassStaticPrefix
+    value: 's'
 
-  # Global constants, static constants, and constexpr: kCamelCase
+  # Global constants: gCamelCase (mirrors global vars)
   - key: readability-identifier-naming.GlobalConstantCase
     value: CamelCase
   - key: readability-identifier-naming.GlobalConstantPrefix
-    value: 'k'
+    value: 'g'
+
+  # Static constants: sCamelCase (mirrors static vars)
   - key: readability-identifier-naming.StaticConstantCase
     value: CamelCase
   - key: readability-identifier-naming.StaticConstantPrefix
-    value: 'k'
+    value: 's'
+
+  # Constexpr variables: kCamelCase
   - key: readability-identifier-naming.ConstexprVariableCase
     value: CamelCase
   - key: readability-identifier-naming.ConstexprVariablePrefix
