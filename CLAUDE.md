@@ -51,7 +51,7 @@ bash scripts/tidy.sh      # clang-tidy (requires build/ to exist for compile_com
 - Constructor initializer lists: `BeforeComma` style, zero extra indent, one per line (`PackConstructorInitializers: NextLine`)
 - Function arguments and parameters: one per line when broken (`BinPackArguments: false`, `BinPackParameters: false`), break after open bracket (`AlignAfterOpenBracket: AlwaysBreak`)
 - Short functions allowed inline only; short if/loops never on a single line
-- Includes: regrouped and sorted case-insensitively — local headers first (`"foo.hpp"`), then system headers (`<...>`), then other quoted headers
+- Includes: regrouped and sorted case-insensitively — the matching header for the `.cpp` file first (`"foo.hpp"` in `foo.cpp`), then system headers (`<...>`), then other project headers
 - `Cpp11BracedListStyle: true`, no space before braced lists
 - Align trailing comments (even across empty lines), align operands
 
