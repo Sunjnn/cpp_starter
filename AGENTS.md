@@ -42,7 +42,8 @@ ctest --test-dir build -C Release --output-on-failure            # all tests
 ```
 
 On multi-config generators the test binary is under `build/tests/<Config>/`. Add a `TEST(Suite, Case)` for every
-behavior change or bug fix.
+behavior change or bug fix. Test sources follow the same convention as the library: `using` declarations at the top
+of the file (`using mylib::greet;`), never a `using namespace` directive.
 
 ## Format and lint
 
@@ -106,10 +107,19 @@ Header guards: use `#ifndef`/`#define` (not `#pragma once`) with extensions `.hp
 
 ## Namespace usage
 
-- Prefer `using` declarations for individual names over namespace-qualified access: `using std::string;`,
-  `using mylib::greet;`.
-- Never use `using namespace std;` or any other blanket `using namespace` directive.
-- One `using` per name, at the top of the `.cpp` file or the function where it is used.
+- Every C++ source file — `src/*.cpp` and `tests/*.cpp` alike — starts with `using` declarations for the names it
+  uses, placed at the top of the file directly after the includes.
+- Any entity may be imported this way: functions, classes/structs/enums, variables and constants, type aliases, and
+  other names from `std`, `mylib`, or third-party namespaces (`using std::string;`, `using std::cout;`,
+  `using mylib::greet;`, `using std::vector;`).
+- Never introduce a whole namespace: no `using namespace std;`, `using namespace mylib;`, or any other blanket
+  `using namespace` directive.
+- Prefer the declaration over namespace-qualified access in function bodies; add another `using` instead of writing
+  `std::`/`mylib::` inline. Full qualification is only a fallback where a declaration cannot work (a header, a
+  conflicting name, a macro).
+- One declaration per name. A function-scoped `using` is acceptable when only that function needs the name.
+- Headers keep names qualified (`std::string`) or scope a `using` inside the project namespace; do not put `using`
+  declarations at global scope in a header.
 
 ## Changing the project
 
